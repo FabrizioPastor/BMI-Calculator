@@ -10,22 +10,25 @@ import UIKit
 
 class ResultController: UIViewController {
 
+    @IBOutlet weak var resultBackGround: UIImageView!
+    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var bmiResultLabel: UILabel!
     var resultBmi: Double = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let messaje = BmiMessageService(bmiValue: resultBmi).message
+        messageLabel.text = messaje
+        
+        let color = BmiColorService(bmiValue: resultBmi).color
+        resultBackGround.backgroundColor = color
+        
+        bmiResultLabel.text = String(format: "%.1f", resultBmi)
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func recalculateButtonPressed(_ sender: Any) {
+        dismiss(animated: true)
     }
-    */
 
 }

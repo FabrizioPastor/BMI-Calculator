@@ -171,6 +171,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="9IV-CT-mxw" firstAttribute="centerX" secondItem="I5P-Pc-Lq3" secondAttribute="centerX" id="5nH-tK-5b9"/>
+                                    <constraint firstItem="kYX-DY-jNL" firstAttribute="centerX" secondItem="I5P-Pc-Lq3" secondAttribute="centerX" id="UNH-XO-tNL"/>
+                                    <constraint firstItem="VU9-2W-Sd5" firstAttribute="centerX" secondItem="I5P-Pc-Lq3" secondAttribute="centerX" id="WDH-7o-RD7"/>
+                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CO5-IF-rJM">
                                 <rect key="frame" x="20" y="787" width="374" height="51"/>
@@ -188,6 +193,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="recalculateButtonPressed:" destination="lkq-xS-Cin" eventType="touchUpInside" id="4fp-6z-wcf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wMZ-LG-Y4P"/>
@@ -204,6 +212,11 @@
                             <constraint firstItem="r83-N3-Ash" firstAttribute="leading" secondItem="A2l-zF-O8p" secondAttribute="leading" id="vIH-oq-YVf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bmiResultLabel" destination="VU9-2W-Sd5" id="iVJ-7g-xhZ"/>
+                        <outlet property="messageLabel" destination="9IV-CT-mxw" id="atF-uV-TRb"/>
+                        <outlet property="resultBackGround" destination="r83-N3-Ash" id="iXS-hA-Vj3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fn-rV-g4l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
